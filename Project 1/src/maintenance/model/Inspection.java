@@ -1,4 +1,4 @@
-package facility.model;
+package maintenance.model;
 
 public class Inspection {
 
