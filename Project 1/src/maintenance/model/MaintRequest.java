@@ -2,7 +2,7 @@ package maintenance.model;
 import java.util.Date;
 
 public class MaintRequest {
-      private int requestNumber;
+     	    private int requestNumber;
 	    private Date dateRequested;
 	    private String requestDescription;
 	    
