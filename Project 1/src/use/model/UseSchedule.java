@@ -1,5 +1,9 @@
 package use.model;
 
-public class UseSchedule {
+import java.util.ArrayList;
 
+public class UseSchedule {
+	
+	
+	
 }

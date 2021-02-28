@@ -1,5 +1,5 @@
 package maintenance.model;
 
-public class MaintenanceLog {
+public class MaintCost {
 
 }
