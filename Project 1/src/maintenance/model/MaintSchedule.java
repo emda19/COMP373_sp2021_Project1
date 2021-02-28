@@ -4,11 +4,11 @@ import java.util.Date;
 public class MaintSchedule {
     private int scheduleNumber;
     private Date dateScheduled;
-    private MaintenanceRequest service = new MaintenanceRequest();
+    private MaintRequest service = new MaintRequest();
     
-    public MaintenanceSchedule(Date date) {
+    public MaintSchedule(Date date) {
     	setDateScheduled(date);
-    	setService(new MaintenanceRequest());
+    	setService(new MaintRequest());
     }
 	  public int getScheduleNumber() {
 		  return scheduleNumber;
@@ -22,10 +22,10 @@ public class MaintSchedule {
 	  public void setDateScheduled(Date dateScheduled) {
 		  this.dateScheduled = dateScheduled;
 	}
-	  public MaintenanceRequest getService() {
+	  public MaintRequest getService() {
 		  return service;
 	}
-	  public void setService(MaintenanceRequest service) {
+	  public void setService(MaintRequest service) {
 		  this.service = service;
 	} 
 }

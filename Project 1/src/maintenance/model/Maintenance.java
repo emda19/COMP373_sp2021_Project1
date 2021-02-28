@@ -2,20 +2,21 @@ package maintenance.model;
 import java.util.*;
 
 public class Maintenance {
-    private int maintenanceCode;
+    
+	private int maintenanceCode;
     private String status = "resolving";
     private String maintenanceProblem;
 
-    private MaintenanceSchedule schedule;
+    private MaintSchedule schedule;
 
-    public MaintenanceSchedule getSchedule() {
+    public MaintSchedule getSchedule() {
         return schedule;
     }
-    public void setSchedule(MaintenanceSchedule schedule) {
+    public void setSchedule(MaintSchedule schedule) {
         this.schedule = schedule;
     }
-    public MaintenanceSchedule scheduleMaintenance(Date date) {
-    	MaintenanceSchedule s = new MaintenanceSchedule(date);
+    public MaintSchedule scheduleMaintenance(Date date) {
+    	MaintSchedule s = new MaintSchedule(date);
         setSchedule(s);
         setStatus("Maintenance has been scheduled");
         return s;
