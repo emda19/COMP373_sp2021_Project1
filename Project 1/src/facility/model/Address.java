@@ -15,4 +15,29 @@ public class Address {
 		this.state = state;
 		this.zipcode = zipcode;
 	}
+	
+	//Get street
+	public String getStreet() {
+		return this.street;
+	}
+	
+	//Get unit
+	public String getUnit() {
+		return this.unit;
+	}
+	
+	//Get city
+	public String getCity() {
+		return this.city;
+	}
+	
+	//Get state
+	public String getState() {
+		return this.state;
+	}
+	
+	//Get zipcode
+	public String getZipcode() {
+		return this.zipcode;
+	}
 }

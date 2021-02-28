@@ -2,23 +2,12 @@ package facility.model;
 
 public class FacilityInfo {
 
-	private String facilityID;
 	private String name;
 	private Address address;
-	private FacilityManager manager;
-	private FacilityCapacity capacity;
+	private FacilityManager manager; //Landlord
+	private FacilityCapacity capacity; //Number of units
 	
 	public FacilityInfo() {}
-	
-	//Set Facility ID
-	public void setFacilityID(String id) {
-		this.facilityID = id;
-	}
-	
-	//Get Facility ID
-	public String getFacilityID() {
-		return this.facilityID;
-	}
 	
 	//Set Name
 	public void setFacilityName(String name) {

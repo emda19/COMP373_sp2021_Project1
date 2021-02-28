@@ -8,18 +8,27 @@ public class FacilityCapacity {
 	public FacilityCapacity() {}
 	
 	//Set total units
-	public void setTotalUnits(int total) {
+	public void setNumTotalUnits(int total) {
 		this.totalUnits = total;
 	}
 	
 	//Get total units
-	public int getTotalUnits() {
+	public int getNumTotalUnits() {
 		return this.totalUnits;
 	}
 	
 	//Set rented units
-	public void setRentedUnits(int rented) {
+	public void setNumRentedUnits(int rented) {
 		this.rentedUnits = rented;
+	}
+	
+	public int getNumRentedUnits() {
+		return this.rentedUnits;
+	}
+	
+	public int getNumAvailableUnits() {
+		int available = this.totalUnits - this.rentedUnits;
+		return available;
 	}
 	
 }

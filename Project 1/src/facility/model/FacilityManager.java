@@ -13,4 +13,24 @@ public class FacilityManager {
 		this.lastName = last;
 		this.phoneNumber = pn;
 	}
+	
+	//Get Manager ID
+	public String getManagerID() {
+		return this.managerID;
+	}
+	
+	//Get first name
+	public String getFirstName() {
+		return this.firstName;
+	}
+	
+	//Get last name
+	public String getLastName() {
+		return this.lastName;
+	}
+	
+	//Get phone number
+	public Phone getPhoneNumber() {
+		return this.phoneNumber;
+	}
 }

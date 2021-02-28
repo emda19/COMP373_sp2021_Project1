@@ -1,13 +1,23 @@
 package facility.model;
 
-import java.util.*;
+public class Facility { //Apartment Building
 
-public interface Facility {
-
-	//public __ addNewFacility();
-	//public __ removeFacility();
-	public ArrayList<Facility> listFacilities();
-	public ArrayList<FacilityInfo> getFacilityInformation();
-	public FacilityCapacity requestAvailableCapacity();
-	public void addFacilityDetail();
+	private String facilityID;
+	private FacilityInfo facilityInfo;
+	
+	public Facility(String id, FacilityInfo info) {
+		this.facilityID = id;
+		this.facilityInfo = info;
+	}
+	
+	//Get Facility ID
+	public String getFacilityID() {
+		return this.facilityID;
+	}
+	
+	//Get Facility ID
+	public FacilityInfo getFacilityInfo() {
+		return this.facilityInfo;
+	}
+	
 }
