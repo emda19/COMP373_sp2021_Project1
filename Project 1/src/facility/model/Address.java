@@ -40,4 +40,9 @@ public class Address {
 	public String getZipcode() {
 		return this.zipcode;
 	}
+	
+	public String toString() {
+		String s = street + ", Apt " + unit + "\n" + city + ", " + state + " " + zipcode;
+		return s;
+	}
 }

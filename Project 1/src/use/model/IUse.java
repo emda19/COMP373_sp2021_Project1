@@ -1,12 +1,12 @@
 package use.model;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 
 public interface IUse {
 
 	public void setUseLogID(String id);
 	public String getUseLogID();
 	
-	public void setUseLog(ArrayList<Usage> list);
-	public ArrayList<Usage> getUseLog();
+	public void setUseLog(HashMap<UseInterval, FacilityUser> map);
+	public HashMap<UseInterval, FacilityUser> getUseLog();
 }

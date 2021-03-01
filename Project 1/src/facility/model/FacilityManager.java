@@ -35,4 +35,11 @@ public class FacilityManager {
 	public Phone getPhoneNumber() {
 		return this.phoneNumber;
 	}
+	
+	public String toString() {
+		String id = "ID: " + this.managerID;
+		String name = this.firstName + " " + this.lastName;
+		String phone = this.phoneNumber.toString();
+		return id + "\n" + name + "\n" + phone;
+	}
 }

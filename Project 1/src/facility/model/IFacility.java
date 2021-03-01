@@ -1,5 +1,7 @@
 package facility.model;
 
+import java.util.Date;
+
 public interface IFacility {
 
 	// Facility ID
@@ -22,6 +24,8 @@ public interface IFacility {
 	public void setFacilityCapacity(FacilityCapacity capacity);
 	public FacilityCapacity getFacilityCapacity();
 	
-	
+	//Date Opened
+	public void setOpenDate(Date d);
+	public Date getOpenDate();
 	
 }

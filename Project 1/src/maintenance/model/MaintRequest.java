@@ -1,6 +1,6 @@
 package maintenance.model;
+
 import java.util.Date;
-import use.model.FacilityUser;
 
 public class MaintRequest {
      	
@@ -8,7 +8,11 @@ public class MaintRequest {
 	private Date dateRequested;
 	private String requestDescription;
 	private boolean requestStatus; //true = open, false = closed (thrown out, or order was made)
-	    
+	   
+	public MaintRequest() {
+		setDateRequested(new Date());
+	}
+	
 	//Get request ID
 	public String getRequestID() {
 		return this.requestID;

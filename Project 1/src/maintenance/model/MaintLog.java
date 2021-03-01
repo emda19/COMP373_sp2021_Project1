@@ -1,8 +1,6 @@
 package maintenance.model;
 
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
 
 // Record of all maintenance orders
 public class MaintLog implements IMaintenance {
@@ -44,7 +42,6 @@ public class MaintLog implements IMaintenance {
 	public ArrayList<Maintenance> getMaintSchedule() {
 		return this.maintSchedule;
 	}
-	
 	
 	
 }

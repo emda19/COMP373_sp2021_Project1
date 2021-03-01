@@ -1,19 +1,17 @@
 package maintenance.model;
+
 import java.util.Date;
-import java.util.HashMap;
 
 // Schedule of future maintenance requests
 public class Maintenance {
     
 	private String scheduleID;
-    private MaintRequest maintRequest;
     private MaintCost cost;
     private Date scheduleDate;
     boolean completed;
     
-    public Maintenance(String id, MaintRequest request, MaintCost cost, Date date) {
+    public Maintenance(String id, MaintCost cost, Date date) {
     	this.scheduleID = id;
-    	this.maintRequest = request;
     	this.cost = cost;
     	this.scheduleDate = date;
     	this.completed = false;
@@ -22,11 +20,6 @@ public class Maintenance {
     //Get schedule ID
     public String getScheduleID() {
     	return this.scheduleID;
-    }
-    
-    //Get request
-    public MaintRequest getMaintRequest() {
-    	return this.maintRequest;
     }
     
     //Get cost

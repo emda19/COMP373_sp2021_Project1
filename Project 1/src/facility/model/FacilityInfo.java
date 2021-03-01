@@ -1,5 +1,7 @@
 package facility.model;
 
+import java.util.Date;
+
 public class FacilityInfo implements IFacility {
 
 	private String facilityID;
@@ -7,10 +9,12 @@ public class FacilityInfo implements IFacility {
 	private Address address;
 	private FacilityManager manager;
 	private FacilityCapacity capacity;
+	private Date openDate;
 	
 	public FacilityInfo() {
 		setFacilityManager(new FacilityManager());
 		setFacilityCapacity(new FacilityCapacity());
+		setOpenDate(new Date());
 	}
 	
 	@Override
@@ -64,7 +68,23 @@ public class FacilityInfo implements IFacility {
 		return this.capacity;
 	}
 	
-	
+	public String toString() {
+		String id = "ID: " + this.facilityID;
+		String name = "Building Name : " + this.name;
+		String address = this.address.toString();
+		String manager = this.manager.toString();
+		return id + "\n" + name + "\n" + address + "\n" + manager;
+	}
+
+	@Override
+	public void setOpenDate(Date d) {
+		this.openDate = d;
+	}
+
+	@Override
+	public Date getOpenDate() {
+		return this.openDate;
+	}
 	
 	
 }

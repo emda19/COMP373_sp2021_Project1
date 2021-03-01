@@ -1,27 +1,40 @@
 package use.model;
 
+import java.util.Date;
+
 public class UseInterval {
 
-	private int startMonth;
-	private int startDay;
-	private int startYear;
-	private int endMonth;
-	private int endDay;
-	private int endYear;
+	private Date startDate;
+	private Date endDate;
 	
-	public UseInterval(int sm, int sd, int sy, int em, int ed, int ey) {
-		this.startMonth = sm;
-		this.startDay = sd;
-		this.startYear = sy;
-		this.endMonth = em;
-		this.endDay = ed;
-		this.endYear = ey;
+	public UseInterval(Date start, Date end) {
+		this.startDate = start;
+		this.endDate = end;
+	}
+	
+	//Get start date
+	public Date getStartDate() {
+		return this.startDate;
+	}
+	
+	//Change start date
+	public void changeStartDate(Date d) {
+		this.startDate = d;
+	}
+	
+	//Get end date
+	public Date getEndDate() {
+		return this.endDate;
+	}
+	
+	//Change end date
+	public void changeEndDate(Date d) {
+		this.endDate = d;
 	}
 	
 	public String toString() {
-		String start = this.startMonth + "/" + this.startDay + "/" + this.startYear;
-		String end = this.endMonth + "/" + this.endDay + "/" + this.endYear;
-		String interval = start + " - " + end;
-		return interval;
+		String start = startDate.toString();
+		String end = endDate.toString();
+		return start + " - " + end;
 	}
 }
