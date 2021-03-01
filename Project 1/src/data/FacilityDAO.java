@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import facility.model.Facility;
 import facility.model.FacilityCapacity;
 import facility.model.FacilityInfo;
-import facility.model.Facility_Interface;
+import facility.model.IFacility;
 
 public class FacilityDAO {
 

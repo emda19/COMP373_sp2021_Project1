@@ -6,21 +6,51 @@ import java.util.HashMap;
 public class MaintSchedule {
     
 	private String scheduleID;
-    private HashMap<Date, MaintOrder> schedule; //Date to be completed, Order to be completed
+    private MaintRequest maintRequest;
+    private MaintCost cost;
+    private Date scheduleDate;
+    boolean completed;
     
-    public MaintSchedule(String id) {
+    public MaintSchedule(String id, MaintRequest request, MaintCost cost, Date date) {
     	this.scheduleID = id;
-    	schedule = new HashMap<Date, MaintOrder>();
+    	this.maintRequest = request;
+    	this.cost = cost;
+    	this.scheduleDate = date;
+    	this.completed = false;
     }
     
     //Get schedule ID
-	public String getScheduleID() {
-		return this.scheduleID;
+    public String getScheduleID() {
+    	return this.scheduleID;
+    }
+    
+    //Get request
+    public MaintRequest getMaintRequest() {
+    	return this.maintRequest;
+    }
+    
+    //Get cost
+    public MaintCost getMaintCost() {
+    	return this.cost;
+    }
+    
+    //Get schedule date
+	public Date getScheduleDate() {
+		return this.scheduleDate;
 	}
 	
-	//Get schedule
-	public HashMap<Date, MaintOrder> getSchedule() {
-		return this.schedule;
+	//Reschedule maintenance
+	public void rescheduleMaint(Date d) {
+		this.scheduleDate = d;
 	}
 	
+	//Get status
+	public boolean isCompleted() {
+		return this.completed;
+	}
+	
+	//Update status
+	public void updateCompletionStatus(boolean b) {
+		this.completed = b;
+	}
 }

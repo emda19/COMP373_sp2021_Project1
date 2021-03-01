@@ -2,9 +2,9 @@ package use.model;
 
 public class FacilityUse {
 
-	private UseSchedule schedule;
+	private UseLog schedule;
 	
-	public FacilityUse(UseSchedule s) {
+	public FacilityUse(UseLog s) {
 		this.schedule = s;
 	}
 }
