@@ -1,6 +1,6 @@
 package data;
 
-import use.model.UseSchedule;
+import use.model.Usage;
 import use.model.UseInterval;
 
 public class UseDAO {

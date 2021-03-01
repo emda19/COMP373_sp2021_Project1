@@ -1,7 +1,5 @@
 package facility.model;
 
-import java.util.ArrayList;
-
 import inspection.model.I_Inspection;
 import inspection.model.Inspection;
 import maintenance.model.IMaintenance;
@@ -21,6 +19,22 @@ public class Facility {
 		this.maint = new MaintLog();
 		this.use = new UseLog();
 		this.inspection = new Inspection();
+	}
+	
+	public FacilityInfo getFacilityInfo() {
+		return (FacilityInfo) this.facility;
+	}
+	
+	public MaintLog getMaintLog() {
+		return (MaintLog) this.maint;
+	}
+	
+	public UseLog getUseLog() {
+		return (UseLog) this.use;
+	}
+	
+	public Inspection getInspection() {
+		return (Inspection) this.inspection;
 	}
 	
 }

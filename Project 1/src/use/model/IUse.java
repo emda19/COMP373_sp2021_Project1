@@ -7,6 +7,6 @@ public interface IUse {
 	public void setUseLogID(String id);
 	public String getUseLogID();
 	
-	public void setUseLog(ArrayList<UseSchedule> list);
-	public ArrayList<UseSchedule> getUseLog();
+	public void setUseLog(ArrayList<Usage> list);
+	public ArrayList<Usage> getUseLog();
 }

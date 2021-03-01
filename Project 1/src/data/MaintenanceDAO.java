@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import facility.model.Facility;
 import maintenance.model.MaintCost;
 import maintenance.model.MaintRequest;
-import maintenance.model.MaintSchedule;
-import use.model.UseSchedule;
+import maintenance.model.Maintenance;
+import use.model.Usage;
 import use.model.UseInterval;
 
 public class MaintenanceDAO {

@@ -5,10 +5,10 @@ import java.util.ArrayList;
 public class UseLog implements IUse {
 	
 	private String useLogID;
-	private ArrayList<UseSchedule> useLog;
+	private ArrayList<Usage> useLog;
 	
 	public UseLog() {
-		this.useLog = new ArrayList<UseSchedule>();
+		this.useLog = new ArrayList<Usage>();
 	}
 
 	@Override
@@ -22,12 +22,12 @@ public class UseLog implements IUse {
 	}
 
 	@Override
-	public void setUseLog(ArrayList<UseSchedule> list) {
+	public void setUseLog(ArrayList<Usage> list) {
 		this.useLog = list;
 	}
 
 	@Override
-	public ArrayList<UseSchedule> getUseLog() {
+	public ArrayList<Usage> getUseLog() {
 		return this.useLog;
 	}
 	

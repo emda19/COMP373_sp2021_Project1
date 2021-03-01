@@ -9,7 +9,7 @@ public class MaintLog implements IMaintenance {
 
 	private String maintLogID;
 	private ArrayList<MaintRequest> requestLog; //list of all maintenance requests
-	private ArrayList<MaintSchedule> schedule; //list of all scheduled maintenance
+	private ArrayList<Maintenance> maintSchedule; //list of all scheduled maintenance
 	
 	public MaintLog() {
 		
@@ -36,13 +36,13 @@ public class MaintLog implements IMaintenance {
 	}
 
 	@Override
-	public void setSchedule(ArrayList<MaintSchedule> list) {
-		this.schedule = list;
+	public void setMaintSchedule(ArrayList<Maintenance> list) {
+		this.maintSchedule = list;
 	}
 
 	@Override
-	public ArrayList<MaintSchedule> getSchedule() {
-		return this.schedule;
+	public ArrayList<Maintenance> getMaintSchedule() {
+		return this.maintSchedule;
 	}
 	
 	

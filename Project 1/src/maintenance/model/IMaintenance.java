@@ -10,7 +10,7 @@ public interface IMaintenance {
 	public void setRequestLog(ArrayList<MaintRequest> list);
 	public ArrayList<MaintRequest> getRequestLog();
 	
-	public void setSchedule(ArrayList<MaintSchedule> list);
-	public ArrayList<MaintSchedule> getSchedule();
+	public void setMaintSchedule(ArrayList<Maintenance> list);
+	public ArrayList<Maintenance> getMaintSchedule();
 	
 }

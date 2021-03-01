@@ -1,11 +1,11 @@
 package use.model;
 
-public class UseSchedule {
+public class Usage {
 
 	private FacilityUser user;
 	private UseInterval interval;
 	
-	public UseSchedule(FacilityUser user, UseInterval interval) {
+	public Usage(FacilityUser user, UseInterval interval) {
 		this.user = user;
 		this.interval = interval;
 	}

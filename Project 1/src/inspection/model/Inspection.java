@@ -8,6 +8,8 @@ public class Inspection implements I_Inspection {
     private String inspectionDescription;
     private String outcome;
 	
+    public Inspection() {}
+    
     @Override
 	public void setInspectionID(String id) {
 		this.inspectionID = id;
