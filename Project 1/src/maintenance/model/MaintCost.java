@@ -1,34 +1,48 @@
 package maintenance.model;
-import java.util.*;
 
 public class MaintCost {
-    private int costNumber;
-		private float laborCosts;
-		private float equipmentCosts;
-		private float totalCosts;
-		
-		public int getCostNumber() {
-			return costNumber;
-		}
-		public void setCostID(int costNumber) {
-			this.costNumber = costNumber;
-		}
-		public float getLaborCost() {
-			return laborCosts;
-		}
-		public void setLaborCost(float laborCosts) {
-			this.laborCosts = laborCosts;
-		}
-		public float getMaterialCost() {
-			return equipmentCosts;
-		}
-		public void setMaterialCost(float equipmentCost) {
-			this.equipmentCosts = equipmentCosts;
-		}
-		public float getTotalCosts() {
-			return totalCosts;
-		}
-		public void setExtra(float totalCosts) {
-			this.totalCosts = totalCosts;
-		}
+    private String costID;
+	private float laborCost;
+	private float equipmentCost;
+	private float totalCost;
+	
+	//Get cost ID
+	public String getCostID() {
+		return costID;
 	}
+	
+	//Set cost ID
+	public void setCostID(String id) {
+		this.costID = id;
+	}
+	
+	//Get labor cost
+	public float getLaborCost() {
+		return laborCost;
+	}
+	
+	//Set labor cost
+	public void setLaborCost(float lc) {
+		this.laborCost = lc;
+	}
+	
+	//Get material cost
+	public float getMaterialCost() {
+		return equipmentCost;
+	}
+	
+	//Set material cost
+	public void setMaterialCost(float ec) {
+		this.equipmentCost = ec;
+	}
+	
+	//Get total cost
+	public float getTotalCost() {
+		return totalCost;
+	}
+	
+	//Set total cost
+	public void setTotalCost(float tc) {
+		this.totalCost = tc;
+	}
+}

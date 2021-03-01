@@ -1,33 +1,26 @@
 package maintenance.model;
 import java.util.Date;
+import java.util.HashMap;
 
+// Schedule of future maintenance requests
 public class MaintSchedule {
-    private int scheduleNumber;
-    private Date dateScheduled;
-    private MaintRequest service = new MaintRequest();
     
-    public MaintSchedule(Date date) {
-    	setDateScheduled(date);
-    	setService(new MaintRequest());
+	private String scheduleID;
+    private HashMap<Date, MaintOrder> schedule; //Date to be completed, Order to be completed
+    
+    public MaintSchedule(String id) {
+    	this.scheduleID = id;
+    	schedule = new HashMap<Date, MaintOrder>();
     }
-	  public int getScheduleNumber() {
-		  return scheduleNumber;
+    
+    //Get schedule ID
+	public String getScheduleID() {
+		return this.scheduleID;
 	}
-	  public void setScheduleID(int scheduleID) {
-		  this.scheduleNumber = scheduleID;
+	
+	//Get schedule
+	public HashMap<Date, MaintOrder> getSchedule() {
+		return this.schedule;
 	}
-	  public Date getDateScheduled() {
-		  return dateScheduled;
-	}
-	  public void setDateScheduled(Date dateScheduled) {
-		  this.dateScheduled = dateScheduled;
-	}
-	  public MaintRequest getService() {
-		  return service;
-	}
-	  public void setService(MaintRequest service) {
-		  this.service = service;
-	} 
+	
 }
-
-

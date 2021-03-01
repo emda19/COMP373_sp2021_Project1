@@ -4,8 +4,6 @@ public class FacilityInfo {
 
 	private String name;
 	private Address address;
-	private FacilityManager manager; //Landlord
-	private FacilityCapacity capacity; //Number of units
 	
 	public FacilityInfo() {}
 	
@@ -29,25 +27,7 @@ public class FacilityInfo {
 		return this.address;
 	}
 	
-	//Set FacilityManager
-	public void setFacilityManager(FacilityManager fm) {
-		this.manager = fm;
-	}
-		
-	//Get FacilityManager
-	public FacilityManager getFacilityManager() {
-		return this.manager;
-	}
 	
-	//Set FacilityCapacity
-	public void setFacilityCapacity(FacilityCapacity fc) {
-		this.capacity = fc;
-	}
-	
-	//Get FacilityCapacity
-	public FacilityCapacity getFacilityCapacity() {
-		return this.capacity;
-	}
 	
 	
 }

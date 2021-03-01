@@ -1,4 +1,4 @@
-package maintenance.model;
+package use.model;
 import java.util.Date;
 
 public class Inspection {

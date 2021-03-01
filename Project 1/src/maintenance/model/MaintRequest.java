@@ -1,39 +1,52 @@
 package maintenance.model;
 import java.util.Date;
+import use.model.FacilityUser;
 
 public class MaintRequest {
-     	private int requestNumber;
-	    private Date dateRequested;
-	    private String requestDescription;
+     	
+	private String requestID;
+	private Date dateRequested;
+	private String requestDescription;
+	private boolean requestStatus; //true = open, false = closed (thrown out, or order was made)
 	    
-	    private Maintenance maintenance;
-	    public MaintRequest() {
-	    	setMaintenance(new Maintenance());
-	    }
-		  public int getRequestID() {
-			  return requestNumber;
-		}
-		  public void setRequestID(int requestID) {
-			  this.requestNumber = requestID;
-		}
-		  public Date getDateRequested() {
-			  return dateRequested;
-		}
-		  public void setDateRequested(Date dateRequested) {
-			  this.dateRequested = dateRequested;
-		}
-		public String getrequestDescription() {
-			return requestDescription;
-		}
-	  	public void setTextDescription(String requestDescription) {
-			  this.requestDescription = requestDescription;
-		}
-	  	public Maintenance getMaintenance() {
-			  return maintenance;
-		}
-		  public void setMaintenance(Maintenance maintanence) {
-		  	this.maintenance = maintanence;
-		}
+	//Get request ID
+	public String getRequestID() {
+		return this.requestID;
+	}
+	
+	//Set request ID
+	public void setRequestID(String requestID) {
+		this.requestID = requestID;
+	}
+	
+	//Get date requested
+	public Date getDateRequested() {
+		return this.dateRequested;
+	}
+	
+	//Set date required
+	public void setDateRequested(Date dateRequested) {
+		this.dateRequested = dateRequested;
+	}
+	
+	//Get request description
+	public String getRequestDescription() {
+		return this.requestDescription;
+	}
+	
+	//Set request description
+	public void setRequestDescription(String requestDescription) {
+		this.requestDescription = requestDescription;
+	}
+	
+	//Get request status
+	public boolean getRequestStatus() {
+		return this.requestStatus;
+	}
+	
+	//Set request status
+	public void setRequestStatus(boolean status) {
+		this.requestStatus = status;
 	}
 
-
+}
