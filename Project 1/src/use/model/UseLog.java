@@ -1,22 +1,35 @@
 package use.model;
 
-import java.util.HashMap;
+import java.util.ArrayList;
 
-public class UseLog {
+public class UseLog implements IUse {
 	
 	private String useLogID;
-	private HashMap<FacilityUser, UseInterval> useLog;
+	private ArrayList<UseSchedule> useLog;
 	
-	public UseLog() {}
-	
-	//Get schedule ID
-	public String getUseScheduleID() {
+	public UseLog() {
+		this.useLog = new ArrayList<UseSchedule>();
+	}
+
+	@Override
+	public void setUseLogID(String id) {
+		this.useLogID = id;
+	}
+
+	@Override
+	public String getUseLogID() {
 		return this.useLogID;
 	}
-	
-	//Get use schedule
-	public HashMap<FacilityUser, UseInterval> getUserSchedule() {
+
+	@Override
+	public void setUseLog(ArrayList<UseSchedule> list) {
+		this.useLog = list;
+	}
+
+	@Override
+	public ArrayList<UseSchedule> getUseLog() {
 		return this.useLog;
 	}
+	
 	
 }

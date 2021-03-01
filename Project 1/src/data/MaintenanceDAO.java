@@ -6,7 +6,7 @@ import facility.model.Facility;
 import maintenance.model.MaintCost;
 import maintenance.model.MaintRequest;
 import maintenance.model.MaintSchedule;
-import use.model.FacilityUse;
+import use.model.UseSchedule;
 import use.model.UseInterval;
 
 public class MaintenanceDAO {

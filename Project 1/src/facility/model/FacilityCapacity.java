@@ -27,8 +27,7 @@ public class FacilityCapacity {
 	}
 	
 	public int getNumAvailableUnits() {
-		int available = this.totalUnits - this.rentedUnits;
-		return available;
+		return (this.totalUnits - this.rentedUnits);
 	}
 	
 }

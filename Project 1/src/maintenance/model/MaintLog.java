@@ -5,45 +5,46 @@ import java.util.Date;
 import java.util.HashMap;
 
 // Record of all maintenance orders
-public class MaintLog {
+public class MaintLog implements IMaintenance {
 
 	private String maintLogID;
 	private ArrayList<MaintRequest> requestLog; //list of all maintenance requests
 	private ArrayList<MaintSchedule> schedule; //list of all scheduled maintenance
 	
 	public MaintLog() {
-		new ArrayList<MaintRequest>();
-		new ArrayList<MaintSchedule>();
+		
 	}
-	
-	//Get maintenance log ID
-	public String getLogID() {
-		return this.maintLogID;
-	}
-	
-	//Set maintenance log ID
-	public void setLogID(String id) {
+
+	@Override
+	public void setMaintLogID(String id) {
 		this.maintLogID = id;
 	}
-	
-	//Get request log
-	public ArrayList<MaintRequest> getLog() {
+
+	@Override
+	public String getMaintLogID() {
+		return this.maintLogID;
+	}
+
+	@Override
+	public void setRequestLog(ArrayList<MaintRequest> list) {
+		this.requestLog = list;
+	}
+
+	@Override
+	public ArrayList<MaintRequest> getRequestLog() {
 		return this.requestLog;
 	}
-	
-	//Set request log
-	public void setRequestLog(ArrayList<MaintRequest> log) {
-		this.requestLog = log;
+
+	@Override
+	public void setSchedule(ArrayList<MaintSchedule> list) {
+		this.schedule = list;
 	}
-	
-	//Get schedule
+
+	@Override
 	public ArrayList<MaintSchedule> getSchedule() {
 		return this.schedule;
 	}
 	
-	//Set schedule
-	public void setSchedule(ArrayList<MaintSchedule> schedule) {
-		this.schedule = schedule;
-	}
+	
 	
 }

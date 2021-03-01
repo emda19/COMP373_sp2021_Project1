@@ -1,83 +1,26 @@
 package facility.model;
 
+import java.util.ArrayList;
+
+import inspection.model.I_Inspection;
+import inspection.model.Inspection;
+import maintenance.model.IMaintenance;
 import maintenance.model.MaintLog;
+import use.model.IUse;
 import use.model.UseLog;
 
-public class Facility implements IFacility { //Apartment Building
+public class Facility {
 
-	private String facilityID;
-	private FacilityInfo info;
-	private FacilityManager manager; //Landlord
-	private FacilityCapacity capacity; //Number of units
-	private MaintLog maintLog;
-	private UseLog useLog;
+	private IFacility facility;
+	private IMaintenance maint;
+	private IUse use;
+	private I_Inspection inspection;
 	
 	public Facility() {
-		new FacilityInfo();
-		new FacilityManager();
-		new FacilityCapacity();
-		new MaintLog();
-		new UseLog();
+		this.facility = new FacilityInfo();
+		this.maint = new MaintLog();
+		this.use = new UseLog();
+		this.inspection = new Inspection();
 	}
 	
-	//Get Facility ID
-	public String getFacilityID() {
-		return this.facilityID;
-	}
-	
-	//Set Facility ID
-	public void setFacilityID(String id) {
-		this.facilityID = id;
-	}
-	
-	//Get Facility Info
-	public FacilityInfo getFacilityInfo() {
-		return this.info;
-	}
-	
-	//Set Facility Info
-	public void setFacilityInfo(FacilityInfo info) {
-		this.info = info;
-	}
-			
-	//Get Facility Manager
-	public FacilityManager getFacilityManager() {
-		return this.manager;
-	}
-	
-	//Set Facility Manager
-	public void setFacilityManager(FacilityManager manager) {
-		this.manager = manager;
-	}
-	
-	//Get Facility Capacity
-	public FacilityCapacity getFacilityCapacity() {
-		return this.capacity;
-	}
-	
-	//Set Facility Capacity
-	public void setFacilityCapacity(FacilityCapacity capacity) {
-		this.capacity = capacity;
-	}
-	
-	//Get Maint Log
-	public MaintLog getFacilityMaintLog() {
-		return this.maintLog;
-	}
-	
-	//Set Maint Log
-	public void setMaintLog(MaintLog maintLog) {
-		this.maintLog = maintLog;
-	}
-	
-	//Get Use Log
-	public UseLog getFacilityUseLog() {
-		return this.useLog;
-	}
-	
-	//Set Use Log
-	public void setUseLog(UseLog useLog) {
-		this.useLog = useLog;
-	}
-
 }
