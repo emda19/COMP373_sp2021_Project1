@@ -3,16 +3,19 @@ package data;
 import java.util.ArrayList;
 
 import facility.model.Facility;
+import facility.model.FacilityCapacity;
+import facility.model.FacilityInfo;
+import facility.model.Facility_Interface;
 
 public class FacilityDAO {
 
-	/*
+	
 	public ArrayList<Facility> listFacilities() {
-		return facilities;
+		return DataStorage.facilities;
 	}
 	
 	public FacilityInfo getFacilityInformation(Facility f) {
-		return f.getFacilityInformation();
+		return f.getFacilityInfo();
 	}
 	
 	public FacilityCapacity requestAvailableCapacity(Facility f) {
@@ -20,14 +23,15 @@ public class FacilityDAO {
 	}
 	
 	public Facility addNewFacility(Facility f) {
-		facilities.add(f);
+		DataStorage.facilities.add(f);
 		return f;
 	}
 	
-	//public void addFacilityDetail() {}
+	public void addFacilityDetail() {}
 	
 	public Facility removeFacility(Facility f) {
-		
+		DataStorage.facilities.remove(f);
+		return f;
 	}
-	*/
+	
 }

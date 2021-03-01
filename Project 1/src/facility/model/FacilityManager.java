@@ -7,6 +7,8 @@ public class FacilityManager {
 	private String lastName;
 	private Phone phoneNumber;
 	
+	public FacilityManager() {}
+	
 	public FacilityManager(String id, String first, String last, Phone pn) {
 		this.managerID = id;
 		this.firstName = first;

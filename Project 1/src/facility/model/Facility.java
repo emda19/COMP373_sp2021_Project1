@@ -6,6 +6,7 @@ import use.model.FacilityUse;
 public class Facility { //Apartment Building
 
 	private String facilityID;
+	
 	private FacilityInfo info;
 	private FacilityManager manager; //Landlord
 	private FacilityCapacity capacity; //Number of units
@@ -27,7 +28,7 @@ public class Facility { //Apartment Building
 		return this.facilityID;
 	}
 	
-	//Get Facility ID
+	//Get Facility Info
 	public FacilityInfo getFacilityInfo() {
 		return this.info;
 	}
