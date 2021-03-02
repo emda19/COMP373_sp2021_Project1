@@ -5,10 +5,12 @@ import java.util.Scanner;
 import java.io.FileNotFoundException;
 
 public class DataManager {
-	DataManager(){}
+	public DataManager(){}
+	
+	//Would be used to simulate reading in different types of data
 	
 	public void readFile(File f) {
-
+		
 		try {
 			Scanner fileReader = new Scanner(f);
 			while (fileReader.hasNextLine()) {
@@ -20,6 +22,7 @@ public class DataManager {
 			System.out.println("File not found");
 			e.printStackTrace();
 		}
+		
 		
 		
 		
