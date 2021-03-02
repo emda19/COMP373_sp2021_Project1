@@ -23,7 +23,7 @@ public class FacilityClient {
 		// Create a facility
 		Facility LakeSideApartments = new Facility();
 		Address address = new Address("8240 Granville", "Apt. 760", "Chicago", "Illinois", "60660");
-		Phone phone = new Phone("123","4567");
+		Phone phone = new Phone("123","4567890");
 		FacilityManager manager = new FacilityManager("75Hd", "Greg", "Smith", phone);
 		FacilityCapacity capacity = new FacilityCapacity();
 		capacity.setNumTotalUnits(800);

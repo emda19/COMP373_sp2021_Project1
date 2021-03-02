@@ -17,7 +17,7 @@ public class Phone {
 		if (pn.length() == 7) {
 			this.phoneNumber = pn;
 		} else {
-			System.out.println("Error: Invalid area code");
+			System.out.println("Error: Invalid phone number");
 			return;
 		}
 	}
