@@ -1,14 +1,14 @@
 package use.model;
 
-import java.util.HashMap;
+import java.util.ArrayList;
 
 public class UseLog implements IUse {
 	
 	private String useLogID;
-	private HashMap<UseInterval, FacilityUser> useLog;
+	private ArrayList<Usage> useLog;
 	
 	public UseLog() {
-		this.useLog = new HashMap<UseInterval, FacilityUser>();
+		this.useLog = new ArrayList<Usage>();
 	}
 
 	@Override
@@ -22,12 +22,12 @@ public class UseLog implements IUse {
 	}
 
 	@Override
-	public void setUseLog(HashMap<UseInterval, FacilityUser> map) {
+	public void setUseLog(ArrayList<Usage> map) {
 		this.useLog = map;
 	}
 
 	@Override
-	public HashMap<UseInterval, FacilityUser> getUseLog() {
+	public ArrayList<Usage> getUseLog() {
 		return this.useLog;
 	}
 	

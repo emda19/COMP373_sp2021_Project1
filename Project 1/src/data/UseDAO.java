@@ -2,13 +2,11 @@ package data;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
 
 import facility.model.Facility;
 import inspection.model.Inspection;
 import use.model.FacilityUser;
+import use.model.Usage;
 import use.model.UseInterval;
 
 public class UseDAO {
@@ -18,8 +16,11 @@ public class UseDAO {
 		Facility f = DataStorage.facilities.get(facility);
 		Date intervalStart = interval.getStartDate();
 		Date intervalEnd = interval.getEndDate();
-		HashMap<UseInterval, FacilityUser> map = f.getUseLog().getUseLog();
-		Set<UseInterval> usageDates = map.keySet();
+		ArrayList<Usage> usage = f.getUseLog().getUseLog();
+		ArrayList<UseInterval> usageDates = new ArrayList<UseInterval>();
+		for (Usage u : usage) {
+			usageDates.add(u.getUseInterval());
+		}
 		for (UseInterval i : usageDates) {
 			Date start = i.getStartDate();
 			Date end = i.getEndDate();
@@ -35,13 +36,14 @@ public class UseDAO {
 		return false;
 	}
 	
-	public HashMap<UseInterval, FacilityUser> assignFacilityToUse(Facility facility, FacilityUser user, UseInterval interval) {
+	public Usage assignFacilityToUse(Facility facility, FacilityUser user, UseInterval interval) {
 		Facility f = DataStorage.facilities.get(facility);
-		f.getUseLog().getUseLog().put(interval, user);
-		return f.getUseLog().getUseLog();
+		Usage u = new Usage(user, interval);
+		f.getUseLog().getUseLog().add(u);
+		return u;
 	}
 	
-	public HashMap<UseInterval, FacilityUser> vacateFacility(Facility facility) {
+	public ArrayList<Usage> vacateFacility(Facility facility) {
 		Facility f = DataStorage.facilities.get(facility);
 		f.getUseLog().getUseLog().clear();
 		return f.getUseLog().getUseLog();
@@ -56,15 +58,15 @@ public class UseDAO {
 		return list;
 	}
 	
-	public Set<Map.Entry<UseInterval, FacilityUser>> listActualUsage(Facility facility) {
+	public ArrayList<Usage> listActualUsage(Facility facility) {
 		Facility f = DataStorage.facilities.get(facility);
-		return f.getUseLog().getUseLog().entrySet();
+		return f.getUseLog().getUseLog();
 	}
 	
 	public int calcUsageRate(Facility facility) {
 		Facility f = DataStorage.facilities.get(facility);
 		long diff = MaintenanceDAO.getTimeDiff(f);
-		int usages = f.getUseLog().getUseLog().keySet().size();
+		int usages = f.getUseLog().getUseLog().size();
 		int rate = (int) (usages / diff);
 		return rate;
 	}
