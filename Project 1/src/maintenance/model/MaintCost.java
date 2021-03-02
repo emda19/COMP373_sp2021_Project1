@@ -45,4 +45,5 @@ public class MaintCost {
 	public void setTotalCost(float tc) {
 		this.totalCost = tc;
 	}
+
 }
