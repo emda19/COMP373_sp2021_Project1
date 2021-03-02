@@ -9,8 +9,11 @@ public class MaintRequest {
 	private String requestDescription;
 	private boolean requestStatus; //true = open, false = closed (thrown out, or order was made)
 	   
-	public MaintRequest() {
-		setDateRequested(new Date());
+	public MaintRequest(String id, Date d, String desc, boolean status) {
+		this.requestID = id;
+		this.dateRequested = d;
+		this.requestDescription = desc;
+		this.requestStatus = status;
 	}
 	
 	//Get request ID

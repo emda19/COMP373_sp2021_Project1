@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public interface IUse {
 
-	public void setUseLogID(String id);
-	public String getUseLogID();
-	
-	public void setUseLog(ArrayList<Usage> map);
-	public ArrayList<Usage> getUseLog();
+	public boolean isInUseDuringInterval(UseInterval interval);
+	public Usage assignFacilityToUse(FacilityUser user, UseInterval interval);
+	public ArrayList<Usage> vacateFacility();
+	public ArrayList<Usage> listActualUsage();
+	public int calcUsageRate();
 }

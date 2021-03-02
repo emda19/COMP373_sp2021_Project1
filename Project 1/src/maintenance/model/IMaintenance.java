@@ -1,16 +1,17 @@
 package maintenance.model;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public interface IMaintenance {
 
-	public void setMaintLogID(String id);
-	public String getMaintLogID();
-	
-	public void setRequestLog(ArrayList<MaintRequest> list);
-	public ArrayList<MaintRequest> getRequestLog();
-	
-	public void setMaintSchedule(ArrayList<Maintenance> list);
-	public ArrayList<Maintenance> getMaintSchedule();
+	public MaintRequest makeFacilityMaintRequest(String id, Date d, String des, boolean status);
+	public Maintenance scheduleMaintenance(String id, MaintCost cost, Date date);
+	public ArrayList<MaintRequest> listMaintRequests();
+	public ArrayList<Maintenance> listMaintenance();
+	public ArrayList<String> listFacilityProblems();
+	public float calcMaintenanceCostForFacility();
+	public int calcProblemRateForFacility();
+	public int calcDownTimeForFacility();
 	
 }

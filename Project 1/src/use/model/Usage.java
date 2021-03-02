@@ -4,6 +4,7 @@ public class Usage {
 
 	private FacilityUser user;
 	private UseInterval useInterval;
+	private int daysUsed;
 	
 	public Usage(FacilityUser u, UseInterval i) {
 		this.user = u;
@@ -24,5 +25,13 @@ public class Usage {
 	
 	public UseInterval getUseInterval() {
 		return this.useInterval;
+	}
+	
+	public void setDaysUsed(int daysUsed) {
+		this.daysUsed = daysUsed;
+	}
+	
+	public int getDaysUsed() {
+		return this.daysUsed;
 	}
 }

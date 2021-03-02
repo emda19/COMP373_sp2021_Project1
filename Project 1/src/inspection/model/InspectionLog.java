@@ -10,13 +10,12 @@ public class InspectionLog implements I_Inspection {
 		this.inspectionLog = new ArrayList<Inspection>();
 	}
 
-	@Override
 	public void setInspectionLog(ArrayList<Inspection> list) {
 		this.inspectionLog = list;
 	}
 
 	@Override
-	public ArrayList<Inspection> getInspectionLog() {
+	public ArrayList<Inspection> listInspections() {
 		return this.inspectionLog;
 	}
 

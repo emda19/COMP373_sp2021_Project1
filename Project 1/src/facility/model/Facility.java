@@ -1,41 +1,60 @@
 package facility.model;
 
-import inspection.model.I_Inspection;
-import inspection.model.InspectionLog;
-import maintenance.model.IMaintenance;
-import maintenance.model.MaintLog;
-import use.model.IUse;
-import use.model.UseLog;
+import java.util.ArrayList;
+import java.util.Date;
 
-public class Facility {
 
-	private IFacility facility;
-	private IMaintenance maint;
-	private IUse use;
-	private I_Inspection inspectionLog;
+public class Facility implements IFacility {
+
+	private ArrayList<Facility> facilities;
+	private FacilityInfo info;
 	
 	public Facility() {
-		this.facility = new FacilityInfo();
-		this.maint = new MaintLog();
-		this.use = new UseLog();
-		this.inspectionLog = new InspectionLog();
+		this.info = new FacilityInfo();
+	}
+
+	public void setFacilityInfo(FacilityInfo info) {
+		this.info = info;
 	}
 	
-	public FacilityInfo getFacilityInfo() {
-		return (FacilityInfo) this.facility;
+	@Override
+	public ArrayList<Facility> listFacilities() {
+		return this.facilities;
 	}
-	
-	
-	public MaintLog getMaintLog() {
-		return (MaintLog) this.maint;
+
+	@Override
+	public FacilityInfo getFacilityInformation() {
+		return this.info;
 	}
-	
-	public UseLog getUseLog() {
-		return (UseLog) this.use;
+
+	@Override
+	public int requestAvailableCapacity() {
+		FacilityCapacity capacity = this.info.getFacilityCapacity();
+		return capacity.getNumAvailableUnits();
 	}
-	
-	public InspectionLog getInspectionLog() {
-		return (InspectionLog) this.inspectionLog;
+
+	@Override
+	public Facility addNewFacility(Facility f) {
+		facilities.add(f);
+		return facilities.get(facilities.size()-1);
 	}
-	
+
+	@Override
+	public Facility removeFacility(Facility f) {
+		this.facilities.remove(f);
+		return f;
+	}
+
+	@Override
+	public FacilityInfo addFacilityDetail(String id, String name, Address address, FacilityManager manager,
+			FacilityCapacity capacity, Date date) {
+		this.info.setFacilityID(id);
+		this.info.setFacilityName(name);
+		this.info.setFacilityAddress(address);
+		this.info.setFacilityManager(manager);
+		this.info.setFacilityCapacity(capacity);
+		this.info.setOpenDate(date);
+		return this.info;
+	}
+
 }
