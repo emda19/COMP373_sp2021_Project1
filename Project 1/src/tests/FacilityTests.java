@@ -10,5 +10,4 @@ class FacilityTests {
 	void test() {
 		fail("Not yet implemented");
 	}
-
 }
