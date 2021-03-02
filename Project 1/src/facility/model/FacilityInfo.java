@@ -1,7 +1,5 @@
 package facility.model;
 
-import java.util.Date;
-
 public class FacilityInfo {
 
 	private String facilityID;
@@ -9,19 +7,16 @@ public class FacilityInfo {
 	private Address address;
 	private FacilityManager manager;
 	private FacilityCapacity capacity;
-	private Date openDate;
 	private int daysOpen;
 	
 	public FacilityInfo() {
 		setFacilityManager(new FacilityManager());
 		setFacilityCapacity(new FacilityCapacity());
-		setOpenDate(new Date());
 	}
 	
 	
 	public void setFacilityID(String id) {
 		this.facilityID = id;
-		
 	}
 
 	
@@ -78,15 +73,6 @@ public class FacilityInfo {
 		return id + "\n" + name + "\n" + address + "\n" + manager;
 	}
 	*/
-	
-	public void setOpenDate(Date d) {
-		this.openDate = d;
-	}
-
-	
-	public Date getOpenDate() {
-		return this.openDate;
-	}
 	
 	public void setDaysOpen(int days) {
 		this.daysOpen = days;

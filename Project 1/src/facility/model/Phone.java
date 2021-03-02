@@ -22,6 +22,14 @@ public class Phone {
 		}
 	}
 	
+	public String getAreaCode() {
+		return this.areaCode;
+	}
+	public String getPhoneNumber() {
+		return this.phoneNumber;
+	}
+	
+	/*
 	//Override toString
 	public String toString() {
 		if (this.areaCode.length() == 0 || this.phoneNumber.length() == 0) {
@@ -30,6 +38,6 @@ public class Phone {
 			String s = "(" + this.areaCode + ") " + this.phoneNumber.substring(0,3) + "-" + this.phoneNumber.substring(3);
 			return s;
 		}
-	}
+	}*/
 	
 }

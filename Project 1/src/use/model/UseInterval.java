@@ -32,9 +32,11 @@ public class UseInterval {
 		this.endDate = d;
 	}
 	
+	/*
 	public String toString() {
 		String start = startDate.toString();
 		String end = endDate.toString();
 		return start + " - " + end;
 	}
+	*/
 }

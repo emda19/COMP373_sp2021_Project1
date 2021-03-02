@@ -52,6 +52,7 @@ public class Inspection {
 		return this.outcome;
 	}
 	
+	/*
 	public String toString() {
 		String id = "ID: " + this.inspectionID;
 		String date = "Date: " + this.inspectionDate.toString();
@@ -59,6 +60,7 @@ public class Inspection {
 		String out = "Outcome: " + this.outcome;
 		return id + "\n" + date + "\n" + desc + "\n" + out;
 	}
+	*/
     
 }
 

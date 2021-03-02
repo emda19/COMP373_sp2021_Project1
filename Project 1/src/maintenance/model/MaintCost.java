@@ -6,6 +6,8 @@ public class MaintCost {
 	private float equipmentCost;
 	private float totalCost;
 	
+	public MaintCost() {}
+	
 	//Get cost ID
 	public String getCostID() {
 		return costID;
